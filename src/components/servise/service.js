@@ -11,6 +11,7 @@ export default class Service {
   }
 
   async getAccess(url, page) {
+    const fullURL = window.location.href
     const apiBase = 'https://api.themoviedb.org/3'
     const apiKey = 'ebfde52ea649f852ab8ef2c3835d90a0'
     if (!localStorage.getItem('token')) {
@@ -27,7 +28,7 @@ export default class Service {
       const newToken = neToken.request_token
 
       localStorage.setItem('token', JSON.stringify(newToken))
-      window.location.href = `https://www.themoviedb.org/authenticate/${newToken}?redirect_to=http://localhost:3000`
+      window.location.href = `https://www.themoviedb.org/authenticate/${newToken}?redirect_to=${fullURL}`
     }
 
     return this.getRes(url, page)
