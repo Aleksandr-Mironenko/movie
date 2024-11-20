@@ -19,6 +19,5 @@ export function GanresProvider({ children }) {
 
     fetchData()
   }, [])
-  console.log(listGenre)
   return <GanresContext.Provider value={listGenre}>{children}</GanresContext.Provider>
 }

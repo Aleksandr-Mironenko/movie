@@ -46,7 +46,6 @@ export default class MovieComponent extends Component {
     return (
       <GanresContext.Consumer>
         {(listGenre) => {
-          console.log(listGenre)
           let buttons = genreButton.map((id, index) => {
             const current = listGenre.find((el) => el.id === id)
 

@@ -17,7 +17,6 @@ export default class Rate extends Component {
     const movies = JSON.parse(localStorage.getItem('dataStarsArray')) || []
 
     if (movies.length !== 0) {
-      console.log(movies, this.state.dataEmpty)
       this.setState({ movies: movies, dataEmpty: false })
     } else {
       this.setState({ dataEmpty: true })

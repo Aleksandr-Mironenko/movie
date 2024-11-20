@@ -4,7 +4,6 @@ import { Anchor } from 'antd'
 export default class Navigation extends Component {
   handleClick = (e, link) => {
     e.preventDefault()
-    console.log(link.title)
     this.props.onChangeNavigator(link.title)
   }
 
